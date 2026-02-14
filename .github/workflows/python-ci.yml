@@ -59,7 +59,8 @@ jobs:
         uses: pmeier/pytest-results-action@main
         with:
           path: test-results.xml
-          fail_on_empty: true
+          fail-on-empty: true
+          title: Test results
 
       - name: Report coverage in PR
         if: github.event_name == 'pull_request'

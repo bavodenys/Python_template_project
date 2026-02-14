@@ -1,14 +1,8 @@
-# Project 1
-## Goal 
+# Python template for project
 
-Learn about setting up a dev container
+Actions badge: ![Python CI](https://github.com/bavodenys/Python_template_project/actions/workflows/python-ci.yml/badge.svg)
 
-## Instructions
+Coverage: [![Coverage](https://codecov.io/gh/bavodenys/Python_template_project/branch/main/graph/badge.svg)](https://codecov.io/gh/<YOUR_USERNAME>/<YOUR_REPO>)
 
-A folder .devcontainer inside the project directory. The folder contains a file devcontainer.json
+Test results:  ![Tests](https://github.com/bavodenys/Python_template_project/actions/workflows/python-ci.yml/badge.svg?event=push)
 
-use ctrl+shift+p -> Dev Containers: Reopen in Container
-
-to run the unit tests
-
-```python -m unittest discover -s tests```
