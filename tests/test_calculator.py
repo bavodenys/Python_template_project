@@ -13,6 +13,3 @@ class CalculatorTestCase:
         assert subtract(5, 1) == 4
         assert subtract(4, 0) == 4
         assert subtract(0, 3) == -3
-        
-
-
