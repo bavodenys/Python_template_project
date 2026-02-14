@@ -1,17 +1,18 @@
-import unittest
+import pytest
 from src.calculator import add, subtract
 
-
-class TestCalculator(unittest.TestCase):
-
+class CalculatorTestCase:
     def test_add(self):
-        self.assertEqual(add(2, 3), 5)
-        self.assertEqual(add(-1, 1), 0)
+        assert add(2, 5) == 7
+        assert add(0, 4) == 4
+        assert add(2, 2) == 4
+        assert add(3, 7) == 10
 
     def test_subtract(self):
-        self.assertEqual(subtract(5, 2), 3)
-        self.assertEqual(subtract(0, 3), -3)
+        assert subtract(4, 2) == 2
+        assert subtract(5, 1) == 4
+        assert subtract(4, 0) == 4
+        assert subtract(0, 3) == -3
+        
 
 
-if __name__ == "__main__":
-    unittest.main()
