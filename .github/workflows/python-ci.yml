@@ -39,7 +39,8 @@ jobs:
           pytest --maxfail=1 -vv -W always -rw \
           --cov=src \
           --cov-report=xml \
-          --cov-report=html
+          --cov-report=html \
+          --junitxml=test-results.xml
 
       - name: Upload coverage HTML report
         uses: actions/upload-artifact@v4
@@ -47,9 +48,14 @@ jobs:
           name: coverage-html
           path: htmlcov
 
+      - name: Upload test results
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-results
+          path: test-results.xml
+
       - name: Report coverage in PR
         if: github.event_name == 'pull_request'
         uses: py-cov-action/python-coverage-comment-action@v3
         with:
           coverage-file: coverage.xml
-
