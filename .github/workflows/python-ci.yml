@@ -54,6 +54,13 @@ jobs:
           name: test-results
           path: test-results.xml
 
+      - name: Display test results in GitHub Actions
+        if: always()
+        uses: pmeier/pytest-results-action@main
+        with:
+          path: test-results.xml
+          fail_on_empty: true
+
       - name: Report coverage in PR
         if: github.event_name == 'pull_request'
         uses: py-cov-action/python-coverage-comment-action@v3
